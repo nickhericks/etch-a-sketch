@@ -35,8 +35,11 @@ ctx.stroke();
 
 // Write a handler for the keys
 function handleKey(e) {
-	e.preventDefault();
-	console.log('Handling key');
+	if(e.key.includes('Arrow')) {
+		e.preventDefault();
+		console.log(e.key);
+
+	}
 }
 
 
