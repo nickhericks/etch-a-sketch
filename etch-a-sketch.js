@@ -11,13 +11,13 @@ const shakeButton = document.querySelector('.shake');
 // const width = canvas.width;
 // const height = canvas.height;
 const { width, height } = canvas;
-console.log(width, height);
+// console.log(width, height);
 
 // create random x and y starting points on the canvas
 const x = Math.floor(Math.random() * width);
 const y = Math.floor(Math.random() * height);
-console.log(x);
-console.log(y);
+// console.log(x);
+// console.log(y);
 
 
 ctx.lineJoin = 'round';
@@ -30,13 +30,16 @@ ctx.lineTo(x, y);
 ctx.stroke();
 
 // Write a draw function
-
+function draw( { key } ) {
+	console.log(key);
+}
 
 
 // Write a handler for the keys
 function handleKey(e) {
 	if(e.key.includes('Arrow')) {
 		e.preventDefault();
+		draw({ key: e.key });
 		console.log(e.key);
 
 	}
